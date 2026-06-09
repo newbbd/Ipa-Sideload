@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A safety-first directory for legit iOS sideloading tools, IPA installers, signing options, and official download links."
+    />
+    <title>Ipa Sideload | Safe iOS Sideloading Directory</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="#top" aria-label="Ipa Sideload home">
+          <span class="logo-mark">IS</span>
+          <span>Ipa Sideload</span>
+        </a>
+        <div class="nav-links">
+          <a href="#tools">Tools</a>
+          <a href="#signing">Signing</a>
+          <a href="#safety">Safety</a>
+          <a href="#submit">Submit</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero">
+        <p class="eyebrow">Legit links only</p>
+        <h1>Find safer iOS sideloading tools without digging through sketchy links.</h1>
+        <p class="hero-copy">
+          A static directory for trusted IPA installers, signers, official project links, and signing option guides.
+          No pirated apps. No leaked certificates. No random profiles.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tools">Browse tools</a>
+          <a class="button secondary" href="#safety">Read safety rules</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section trust-strip" aria-label="Site principles">
+        <article>
+          <strong>Official sources</strong>
+          <span>Links point to project sites, GitHub releases, or developer docs.</span>
+        </article>
+        <article>
+          <strong>Risk labels</strong>
+          <span>Each tool gets a simple safety and trust summary.</span>
+        </article>
+        <article>
+          <strong>No cert selling</strong>
+          <span>Signing options are explained, not traded or distributed.</span>
+        </article>
+      </section>
+
+      <section id="tools" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Directory</p>
+          <h2>Tools</h2>
+          <p>Search by name, platform, requirement, or tag.</p>
+        </div>
+
+        <div class="controls" role="search">
+          <label class="sr-only" for="searchInput">Search tools</label>
+          <input id="searchInput" type="search" placeholder="Search tools, platforms, tags..." autocomplete="off" />
+
+          <label class="sr-only" for="typeFilter">Filter by type</label>
+          <select id="typeFilter">
+            <option value="all">All types</option>
+            <option value="installer">Installers</option>
+            <option value="signer">Signers</option>
+            <option value="official">Official options</option>
+          </select>
+        </div>
+
+        <div id="toolGrid" class="tool-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="signing" class="section split-section">
+        <div>
+          <p class="eyebrow">Certificates</p>
+          <h2>Use this as a signing guide, not a cert market.</h2>
+          <p>
+            Shared certificates and random enterprise profiles can be revoked, abused, or used to trick people into
+            installing unsafe apps. This site should explain safe signing routes instead of distributing cert files.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Recommended signing categories</h3>
+          <ul class="check-list">
+            <li>Free Apple ID sideloading with refresh limits</li>
+            <li>Paid Apple Developer Program signing</li>
+            <li>TestFlight beta distribution</li>
+            <li>Region-supported marketplace options where legally available</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="safety" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Rules</p>
+          <h2>Safety checklist</h2>
+          <p>Use these rules to keep the directory useful and clean.</p>
+        </div>
+
+        <div class="rule-grid">
+          <article class="rule-card">
+            <span>01</span>
+            <h3>No cracked IPAs</h3>
+            <p>Do not list pirated apps, paid app dumps, game cheats, or modified apps made to bypass payment.</p>
+          </article>
+          <article class="rule-card">
+            <span>02</span>
+            <h3>No leaked certs</h3>
+            <p>Do not host or promote random P12 files, enterprise certs, or Telegram certificate drops.</p>
+          </article>
+          <article class="rule-card">
+            <span>03</span>
+            <h3>Official links first</h3>
+            <p>Prefer the developer website, verified GitHub repo, official docs, or app marketplace page.</p>
+          </article>
+          <article class="rule-card">
+            <span>04</span>
+            <h3>Be honest about risk</h3>
+            <p>Label tools that need a computer, refresh apps, use profiles, or depend on region-specific rules.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="submit" class="section submit-box">
+        <p class="eyebrow">Submit</p>
+        <h2>Suggest a tool</h2>
+        <p>
+          Add a submission form later using GitHub Issues, Tally, or a simple mail link. Review everything manually
+          before adding it to the directory.
+        </p>
+        <a class="button primary" href="https://github.com/newbbd/Ipa-Sideload/issues" rel="noopener">Open GitHub issues</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Ipa Sideload is an informational directory. Always verify links before installing anything on your device.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
