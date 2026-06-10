@@ -85,56 +85,67 @@ h1 {
   font-weight: 760;
 }
 
-.signer-list {
-  display: grid;
-  gap: 1px;
-  margin-bottom: 76px;
-  border: 1px solid var(--line);
-  background: var(--line);
+.intro-copy {
+  max-width: 640px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
 }
 
-.signer {
+.intro-actions {
+  margin-top: 24px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.intro-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.chooser-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr auto;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 52px;
+}
+
+.chooser-card {
+  display: grid;
+  gap: 18px;
   padding: 28px;
+  border: 1px solid var(--line);
   background: var(--panel);
 }
 
-.signer-heading h2 {
-  margin: 0 0 6px;
-  font-size: 1.55rem;
-  line-height: 1;
+.chooser-card h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 0.95;
   letter-spacing: -0.04em;
-  font-weight: 680;
+  font-weight: 720;
 }
 
-.signer-heading span {
+.chooser-card p:last-of-type {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  max-width: 30ch;
 }
 
-dl {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 0;
-}
-
-dt {
+.chooser-label {
+  margin: 0;
   color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-dd {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-}
-
-.signer > a {
+.download-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -145,11 +156,167 @@ dd {
   font-size: 0.9rem;
   font-weight: 650;
   white-space: nowrap;
+  width: fit-content;
 }
 
-.signer > a:hover {
+.download-link:hover {
   background: var(--text);
   color: var(--background);
+}
+
+.secondary-link {
+  border-color: var(--line);
+}
+
+.detail-hero {
+  padding: 54px 0 18px;
+}
+
+.detail-intro {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.dns-callout {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 22px;
+  max-width: 760px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.dns-callout h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.dns-callout p:last-of-type {
+  margin: 0;
+  color: var(--muted);
+}
+
+.dns-link {
+  width: fit-content;
+}
+
+.dns-grid {
+  margin-bottom: 0;
+}
+
+.dns-domains .install-link {
+  cursor: default;
+}
+
+.dns-domains .install-link:hover,
+.static-item:hover {
+  background: var(--background);
+  color: var(--text);
+}
+
+.install-method {
+  display: grid;
+  gap: 26px;
+  padding-bottom: 76px;
+}
+
+.section-copy {
+  max-width: 720px;
+}
+
+.section-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.section-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.section-copy code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.install-groups {
+  display: grid;
+  gap: 24px;
+}
+
+.install-group {
+  padding: 26px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.install-group-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.install-group-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.install-group-header span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.install-eyebrow {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.install-links {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.install-link {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  background: var(--background);
+  text-decoration: none;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.install-link:hover {
+  background: var(--text);
+  color: var(--background);
+}
+
+.install-link-title {
+  font-size: 0.97rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.install-link-subtitle {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.install-link:hover .install-link-subtitle {
+  color: inherit;
 }
 
 .site-footer {
@@ -181,18 +348,35 @@ dd {
     text-align: left;
   }
 
-  .signer {
+  .chooser-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 
-  dl {
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .button-row {
+    display: grid;
   }
 
-  .signer > a {
+  .download-link {
     width: 100%;
+  }
+
+  .dns-link {
+    width: 100%;
+  }
+
+  .install-group,
+  .install-link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .install-group-header {
+    display: block;
+  }
+
+  .install-group-header span {
+    display: inline-block;
+    margin-top: 8px;
   }
 
   .site-footer a {

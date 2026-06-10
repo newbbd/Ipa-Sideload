@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DNS profile options and alternatives for sideload app installs."
+    />
+    <title>DNS alternatives</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./">ipa-sideload</a>
+      <p>DNS options for app install compatibility.</p>
+    </header>
+
+    <main>
+      <section class="detail-hero" aria-labelledby="dns-title">
+        <p class="label">dns setup</p>
+        <h1 id="dns-title">DNS alternatives</h1>
+        <p class="detail-intro">
+          If the official khoindvn DNS profile does not work for you, these alternatives aim to do the same
+          job before you attempt app installs.
+        </p>
+      </section>
+
+      <section class="install-method" aria-labelledby="dns-options-title">
+        <div class="section-copy">
+          <p class="label">options</p>
+          <h2 id="dns-options-title">Profiles and backups</h2>
+          <p>Use a direct profile if you want the fastest setup, or use NextDNS if you want your own custom DNS profile.</p>
+        </div>
+
+        <div class="chooser-grid dns-grid">
+          <article class="chooser-card">
+            <p class="chooser-label">official</p>
+            <h2>khoindvn DNS</h2>
+            <p>Primary profile used for the signer install flow on this site.</p>
+            <a
+              class="download-link"
+              href="https://github.com/dns-khoindvn/oci-auto-vm/releases/download/DNS/khoindvn.mobileconfig"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Install khoindvn DNS
+            </a>
+          </article>
+
+          <article class="chooser-card">
+            <p class="chooser-label">alternative profile</p>
+            <h2>NovaDNS</h2>
+            <p>Direct mobileconfig alternative also used in other signer install flows.</p>
+            <a
+              class="download-link"
+              href="https://novadev.vip/resources/dns/novadns.mobileconfig"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Install NovaDNS
+            </a>
+          </article>
+
+          <article class="chooser-card">
+            <p class="chooser-label">custom setup</p>
+            <h2>NextDNS</h2>
+            <p>Create your own Apple profile in NextDNS and use the same blocklist behavior as these profiles.</p>
+            <a class="download-link" href="https://nextdns.io/" target="_blank" rel="noopener noreferrer">
+              Open NextDNS
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="install-method" aria-labelledby="blocklist-title">
+        <div class="section-copy">
+          <p class="label">nextdns blocklist</p>
+          <h2 id="blocklist-title">Domains to block</h2>
+          <p>
+            If you set up your own NextDNS profile, add these exact domains to the denylist first, then download
+            your Apple profile from the NextDNS dashboard.
+          </p>
+        </div>
+
+        <section class="install-group" aria-label="Domains to block">
+          <div class="install-links dns-domains">
+            <div class="install-link static-item"><span class="install-link-title">certs.apple.com</span></div>
+            <div class="install-link static-item"><span class="install-link-title">valid.apple.com</span></div>
+            <div class="install-link static-item"><span class="install-link-title">crl.apple.com</span></div>
+            <div class="install-link static-item"><span class="install-link-title">ocsp2.apple.com</span></div>
+            <div class="install-link static-item"><span class="install-link-title">apptest.apple.com</span></div>
+            <div class="install-link static-item"><span class="install-link-title">vpp.itunes.apple.com</span></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Last checked: June 9, 2026</span>
+      <a href="./">Back to signer list</a>
+    </footer>
+  </body>
+</html>
