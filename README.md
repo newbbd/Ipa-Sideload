@@ -1,97 +1,46 @@
 # Ipa Sideload
 
-A safety-first static directory for legit iOS sideloading tools, IPA installers, signing options, and official download links.
+Static GitHub Pages site for iOS signer install pages and DNS setup links.
 
 Live site: https://newbbd.github.io/Ipa-Sideload/
-
-## What this is
-
-Ipa Sideload helps users find safer iOS sideloading resources without relying on random mirrors, Telegram links, or sketchy certificate drops.
-
-The site is built with plain HTML, CSS, and JavaScript so it can run for free on GitHub Pages.
-
-## Current features
-
-- Clean landing page
-- Searchable tool directory
-- Tool type filtering
-- Safety rules section
-- Signing options guide section
-- GitHub Pages deployment workflow
-
-## Safety rules
-
-This project should stay clean and useful.
-
-Do not add:
-
-- Pirated IPAs
-- Paid app cracks
-- Leaked certificates
-- Random P12 files
-- Enterprise certificate drops
-- Malware, spyware, or suspicious profiles
-- Links that hide the real source
-
-Prefer:
-
-- Official websites
-- Verified GitHub repositories
-- Apple developer documentation
-- Clear risk notes
-- Manual review before adding new tools
 
 ## Project structure
 
 ```txt
 .
 ├── index.html
+├── dns.html
+├── esign.html
+├── ksign.html
 ├── styles.css
 ├── script.js
-├── .nojekyll
-└── .github/workflows/pages.yml
+└── .nojekyll
 ```
 
-## How to edit tools
+## Pages deployment
 
-Tool cards are currently stored in `script.js` inside the `tools` array.
+This repository is currently published from the `gh-pages` branch using GitHub Pages' branch-based deployment.
 
-Example:
+If the live site needs to be refreshed:
 
-```js
-{
-  name: "AltStore",
-  type: "installer",
-  risk: "safe",
-  summary: "A popular sideloading app store with official downloads and clear setup docs.",
-  tags: ["iOS", "macOS", "Windows", "Apple ID", "Refresh required"],
-  url: "https://altstore.io/"
-}
-```
+1. Update the static files on `main`.
+2. Copy the published site files to `gh-pages`.
+3. Push both branches.
 
-## GitHub Pages setup
+The `gh-pages` branch should contain the same site files that should appear at:
 
-This repo includes a GitHub Actions workflow for Pages deployment.
+`https://newbbd.github.io/Ipa-Sideload/`
 
-If the live site does not load yet, go to:
+## How the site is organized
 
-`Settings > Pages > Build and deployment > Source`
+- `index.html` is the landing page.
+- `dns.html` contains DNS profile alternatives and manual blocklist instructions.
+- `esign.html` loads the E-Sign install list.
+- `ksign.html` loads the Ksign install list.
+- `script.js` stores the signer data in the `installGroups` array and renders the dedicated install pages.
+- `styles.css` provides the shared styling for all pages.
 
-Then select:
+## Notes
 
-`GitHub Actions`
-
-After that, push to `main` or run the workflow manually.
-
-## Roadmap
-
-- Move tool data into a separate JSON file
-- Add trust score labels
-- Add last checked dates
-- Add region support notes
-- Add a submission issue template
-- Add official source verification checklist
-
-## Disclaimer
-
-Ipa Sideload is an informational directory. Always verify official links before installing anything on an iOS device.
+- The site is plain HTML, CSS, and JavaScript.
+- `.nojekyll` is included so GitHub Pages serves the files as-is.
